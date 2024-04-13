@@ -1,8 +1,8 @@
-namespace ScheduleMaker.DTO;
+namespace ScheduleMaker.Dtos;
 
-public class EventUpdateDto
+
+public class CreateEventRequestDto
 {
-    public int Id { get; set; }
 
     public string Title { get; set; } = string.Empty;
 

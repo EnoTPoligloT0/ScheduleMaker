@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ScheduleMaker.DTO;
 using ScheduleMaker.Models;
 
 namespace ScheduleMaker.Interfaces;
@@ -10,9 +11,10 @@ namespace ScheduleMaker.Interfaces;
 public interface IEventRepository
 {
     Task<List<Event>> GetAllAsync();
-    Task<Event?> GetAllByIdAsync();
-    Task<Event> CreateAsync();
-    Task<Event> UpdateAsync();
-    Task<Event> DeleteAsync();
+    Task<Event?> GetAllByIdAsync(int id);
+    Task<Event> CreateAsync(int id, Event eventModel);
+    Task<Event?> UpdateAsync(int id, UpdateEventRequestDto eventDto);
+    Task<Event?> DeleteAsync(int id);
+    Task<bool> EventExists(int id);
 
 }
