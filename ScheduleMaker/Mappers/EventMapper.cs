@@ -6,7 +6,7 @@ namespace ScheduleMaker.Mappers;
 
 public static class EventMapper
 {
-    public static EventDto ToCommentDto(this Event eventModel)
+    public static EventDto ToEventDto(this Event eventModel)
     {
         return new EventDto
         {
@@ -17,14 +17,15 @@ public static class EventMapper
             EndTime = eventModel.endTime
         };
     }
-    public static EventDto ToCommentFromCreateDto(this CreateEventRequestDto eventDto)
+
+    public static Event ToEventFromCreateDto(this CreateEventRequestDto eventDto)
     {
-        return new EventDto
+        return new Event
         {
             Title = eventDto.Title,
-            Description = eventDto.Description,
-            StartTime = eventDto.StartTime,
-            EndTime = eventDto.EndTime
+            Discription = eventDto.Description,
+            startTime = eventDto.StartTime,
+            endTime = eventDto.EndTime
         };
     }
 }

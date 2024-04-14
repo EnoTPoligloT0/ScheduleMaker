@@ -3,9 +3,9 @@ using ScheduleMaker.Models;
 
 namespace ScheduleMaker.Data;
 
-public class ApplicationDBcontex : DbContext
+public class ApplicationDBcontext : DbContext
 {
-    public ApplicationDBcontex(DbContextOptions dbContextOptions) : base(dbContextOptions)
+    public ApplicationDBcontext(DbContextOptions dbContextOptions) : base(dbContextOptions)
     {
 
     }

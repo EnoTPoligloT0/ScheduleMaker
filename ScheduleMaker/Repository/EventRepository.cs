@@ -8,9 +8,9 @@ namespace ScheduleMaker.Repository;
 
 public class EventRepository : IEventRepository
 {
-    private readonly ApplicationDBcontex  _context;
+    private readonly ApplicationDBcontext  _context;
 
-    public EventRepository(ApplicationDBcontex context)
+    public EventRepository(ApplicationDBcontext context)
     {
         _context = context;
     }
@@ -20,7 +20,7 @@ public class EventRepository : IEventRepository
         return await _context.Events.ToListAsync();
     }
 
-    public async Task<Event?> GetAllByIdAsync(int id)
+    public async Task<Event?> GetByIdAsync(int id)
     {
         return await _context.Events.FindAsync(id);
     }
