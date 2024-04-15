@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ScheduleMaker.Data;
-using ScheduleMaker.DTO;
+using ScheduleMaker.Dtos;
 using ScheduleMaker.Dtos;
 using ScheduleMaker.Interfaces;
 using ScheduleMaker.Mappers;
@@ -23,6 +23,11 @@ public class EventController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
+        if(!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+        
         var events = await _eventRepository.GetAllAsync();
 
         var eventDto = events.Select(x => x.ToEventDto()).ToList();
@@ -33,6 +38,11 @@ public class EventController : ControllerBase
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById([FromRoute] string id)
     {
+        if(!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+        
         var foundEvent = await _eventRepository.GetByIdAsync(int.Parse(id));
 
         if (foundEvent == null)
@@ -51,6 +61,7 @@ public class EventController : ControllerBase
         {
             return BadRequest(ModelState);
         }
+        
         var eventModel = eventRequestDto.ToEventFromCreateDto();
         await _eventRepository.CreateAsync(eventModel);
         return CreatedAtAction(nameof(GetById), new { id = eventModel.Id }, eventModel.ToEventDto());
@@ -83,6 +94,11 @@ public class EventController : ControllerBase
     
     public async Task<IActionResult> Delete([FromRoute] int id)
     {
+        if(!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+        
         var eventModel = await _eventRepository.DeleteAsync(id);
 
         if (eventModel == null)

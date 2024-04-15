@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ScheduleMaker.Data;
-using ScheduleMaker.DTO;
+using ScheduleMaker.Dtos;
 using ScheduleMaker.Interfaces;
 using ScheduleMaker.Models;
 
@@ -42,7 +42,7 @@ public class EventRepository : IEventRepository
         }
 
         existingEvent.Title = eventDto.Title;
-        existingEvent.Discription = eventDto.Description;
+        existingEvent.Description = eventDto.Description;
         existingEvent.startTime = eventDto.StartTime;
         existingEvent.endTime = eventDto.EndTime;
 

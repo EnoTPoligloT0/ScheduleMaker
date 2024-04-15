@@ -1,4 +1,4 @@
-﻿using ScheduleMaker.DTO;
+﻿using ScheduleMaker.Dtos;
 using ScheduleMaker.Dtos;
 using ScheduleMaker.Models;
 
@@ -12,7 +12,7 @@ public static class EventMapper
         {
             Id = eventModel.Id,
             Title = eventModel.Title,
-            Description = eventModel.Discription,
+            Description = eventModel.Description,
             StartTime = eventModel.startTime,
             EndTime = eventModel.endTime
         };
@@ -23,7 +23,7 @@ public static class EventMapper
         return new Event
         {
             Title = eventDto.Title,
-            Discription = eventDto.Description,
+            Description = eventDto.Description,
             startTime = eventDto.StartTime,
             endTime = eventDto.EndTime
         };

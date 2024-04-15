@@ -1,4 +1,4 @@
-namespace ScheduleMaker.DTO;
+namespace ScheduleMaker.Dtos;
 
 public class EventDto
 {
