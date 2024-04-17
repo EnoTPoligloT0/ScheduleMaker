@@ -4,8 +4,6 @@ namespace ScheduleMaker.Dtos;
 
 public class UpdateEventRequestDto
 {
-    public int Id { get; set; }
-
     [Required]
     [MaxLength(30, ErrorMessage = "Title must be maximum 30 characters long.") ]
     public string Title { get; set; } = string.Empty;

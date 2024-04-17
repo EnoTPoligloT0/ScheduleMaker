@@ -70,14 +70,14 @@ public class EventController : ControllerBase
     [HttpPut]
     [Route("{id}")]
 
-    public async Task<IActionResult> Update([FromRoute] int Id,[FromBody] UpdateEventRequestDto eventRequestDto)
+    public async Task<IActionResult> Update([FromRoute] int id,[FromBody] UpdateEventRequestDto eventRequestDto)
     {
         if (!ModelState.IsValid)
         {
             return BadRequest(ModelState);
         }
 
-        var eventModel = await _eventRepository.UpdateAsync(Id, eventRequestDto);
+        var eventModel = await _eventRepository.UpdateAsync(id, eventRequestDto);
 
         if (eventModel == null)
         {
