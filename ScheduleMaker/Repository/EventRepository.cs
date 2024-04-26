@@ -43,8 +43,8 @@ public class EventRepository : IEventRepository
 
         existingEvent.Title = eventDto.Title;
         existingEvent.Description = eventDto.Description;
-        existingEvent.startTime = eventDto.StartTime;
-        existingEvent.endTime = eventDto.EndTime;
+        existingEvent.StartTime = eventDto.StartTime;
+        existingEvent.EndTime = eventDto.EndTime;
 
         _context.Events.Update(existingEvent);
 

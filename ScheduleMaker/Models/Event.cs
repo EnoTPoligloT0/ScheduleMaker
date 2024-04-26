@@ -8,8 +8,8 @@ public class Event
 
     public string Description { get; set; } = string.Empty;
     
-    public DateTime startTime { get; set; }
+    public DateTime StartTime { get; set; }
 
-    public DateTime endTime { get; set; }
+    public DateTime EndTime { get; set; }
 
 }

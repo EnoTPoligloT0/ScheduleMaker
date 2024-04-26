@@ -13,11 +13,11 @@ public class UpdateEventRequestDto
     public string Description { get; set; } = string.Empty;
     
     [Required(ErrorMessage = "StartTime is required")]
-    [DataType(DataType.Date, ErrorMessage = "Invalid format for StartTime")]
+    [DataType(DataType.DateTime, ErrorMessage = "Invalid format for StartTime")]
     public DateTime StartTime { get; set; }
 
     [Required(ErrorMessage = "EndTime is required")]
-    [DataType(DataType.Date, ErrorMessage = "Invalid format for EndTime")]
+    [DataType(DataType.DateTime, ErrorMessage = "Invalid format for EndTime")]
     public DateTime EndTime { get; set; }
     
     public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)

@@ -13,8 +13,8 @@ public static class EventMapper
             Id = eventModel.Id,
             Title = eventModel.Title,
             Description = eventModel.Description,
-            StartTime = eventModel.startTime,
-            EndTime = eventModel.endTime
+            StartTime = eventModel.StartTime,
+            EndTime = eventModel.EndTime
         };
     }
 
@@ -24,8 +24,8 @@ public static class EventMapper
         {
             Title = eventDto.Title,
             Description = eventDto.Description,
-            startTime = eventDto.StartTime,
-            endTime = eventDto.EndTime
+            StartTime = eventDto.StartTime,
+            EndTime = eventDto.EndTime
         };
     }
 }
