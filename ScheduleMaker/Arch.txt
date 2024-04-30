@@ -1,0 +1,50 @@
+Schedule
+│
+└── ScheduleMaker
+    │
+    ├── Dependencies
+    │
+    ├── Controllers
+    │   └── EventController.cs
+    │
+    ├── Data
+    │   └── ApplicationDBcontext.cs
+    │
+    ├── Dtos
+    │   ├── EventDto.cs
+    │   ├── CreateEventRequestDto.cs
+    │   └── UpdateEventRequestDto.cs
+    │
+    ├── Mappers
+    │   └── EventMapper.cs
+    │
+    ├── Models
+    │   └── Event.cs
+    │
+    ├── Interfaces
+    │   └── IEventRepository.cs
+    │
+    ├── Properties
+    │
+    ├── Pages
+    │   ├── Index.cshtml
+    │   ├── Create.cshtml
+    │   ├── Edit.cshtml
+    │   ├── Delete.cshtml
+    │   ├── Details.cshtml
+    │   └── Shared
+    │       └── _EventForm.cshtml
+    │
+    ├── Extensions
+    │
+    ├── Program.cs
+    │
+    ├── appsettings.json
+    │
+    ├── appsettings.Development.json
+    │
+    ├── launchSettings.json
+    │
+    ├── EventRepository.cs
+    │
+    └── .csproj files, .gitignore, etc.

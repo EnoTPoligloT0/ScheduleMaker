@@ -322,3 +322,13 @@ C:/Users/Artem/RiderProjects/ScheduleMaker/ScheduleMaker/obj/Debug/net8.0/ref/Sc
 /home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/bin/Debug/net8.0/Microsoft.Extensions.Identity.Core.dll
 /home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/bin/Debug/net8.0/Microsoft.Extensions.Identity.Stores.dll
 /home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/obj/Debug/net8.0/ScheduleMaker.RazorAssemblyInfo.cache
+/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/obj/Debug/net8.0/ScheduleMaker.RazorAssemblyInfo.cs
+/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/bin/Debug/net8.0/FullCalendar.MVC5.dll
+/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/bin/Debug/net8.0/System.Web.Mvc.dll
+/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/bin/Debug/net8.0/System.Web.Razor.dll
+/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/bin/Debug/net8.0/System.Web.Helpers.dll
+/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/bin/Debug/net8.0/System.Web.WebPages.Deployment.dll
+/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/bin/Debug/net8.0/System.Web.WebPages.Razor.dll
+/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/bin/Debug/net8.0/System.Web.WebPages.dll
+/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/bin/Debug/net8.0/Microsoft.Web.Infrastructure.dll

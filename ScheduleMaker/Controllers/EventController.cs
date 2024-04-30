@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using ScheduleMaker.Data;
 using ScheduleMaker.Dtos;
 using ScheduleMaker.Dtos;
@@ -108,4 +109,5 @@ public class EventController : ControllerBase
 
         return NoContent();
     }
+    
 }
