@@ -9,47 +9,51 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ScheduleMaker
 build_property.RootNamespace = ScheduleMaker
-build_property.ProjectDir = /home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/
+build_property.ProjectDir = C:\Users\Artem\RiderProjects\ScheduleMaker\ScheduleMaker\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker
+build_property.MSBuildProjectDirectory = C:\Users\Artem\RiderProjects\ScheduleMaker\ScheduleMaker
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/Pages/createEventModal.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvY3JlYXRlRXZlbnRNb2RhbC5jc2h0bWw=
+[C:/Users/Artem/RiderProjects/ScheduleMaker/ScheduleMaker/Pages/createEventModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY3JlYXRlRXZlbnRNb2RhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/Pages/createEventModalTest.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvY3JlYXRlRXZlbnRNb2RhbFRlc3QuY3NodG1s
+[C:/Users/Artem/RiderProjects/ScheduleMaker/ScheduleMaker/Pages/createEventModalTest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY3JlYXRlRXZlbnRNb2RhbFRlc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/Pages/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRGVsZXRlLmNzaHRtbA==
+[C:/Users/Artem/RiderProjects/ScheduleMaker/ScheduleMaker/Pages/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/Pages/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRGV0YWlscy5jc2h0bWw=
+[C:/Users/Artem/RiderProjects/ScheduleMaker/ScheduleMaker/Pages/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/Pages/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRWRpdC5jc2h0bWw=
+[C:/Users/Artem/RiderProjects/ScheduleMaker/ScheduleMaker/Pages/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/Pages/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+[C:/Users/Artem/RiderProjects/ScheduleMaker/ScheduleMaker/Pages/getEventsModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcZ2V0RXZlbnRzTW9kYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/Pages/Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTGF5b3V0LmNzaHRtbA==
+[C:/Users/Artem/RiderProjects/ScheduleMaker/ScheduleMaker/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/Pages/loginModal.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvbG9naW5Nb2RhbC5jc2h0bWw=
+[C:/Users/Artem/RiderProjects/ScheduleMaker/ScheduleMaker/Pages/Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/Pages/registerModal.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvcmVnaXN0ZXJNb2RhbC5jc2h0bWw=
+[C:/Users/Artem/RiderProjects/ScheduleMaker/ScheduleMaker/Pages/loginModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcbG9naW5Nb2RhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Artem/RiderProjects/ScheduleMaker/ScheduleMaker/Pages/registerModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccmVnaXN0ZXJNb2RhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

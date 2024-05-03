@@ -7,21 +7,58 @@
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script>
-
         document.addEventListener('DOMContentLoaded', function() {
             var calendarEl = document.getElementById('calendar');
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'timeGridWeek',
-                headerToolbar:{
-                    start: "today, prev, next",
-                    center: "title",
-                    end: "dayGridMonth, timeGridWeek, timeGridDay"
-                }
+                headerToolbar: {
+                    start: 'today, prev, next',
+                    center: 'title',
+                    end: 'dayGridMonth, timeGridWeek, timeGridDay'
+                },
+                events:  {
+                    url: '/ScheduleMaker/event',
+                    failure: function() {
+                        console.error('Error fetching events from the server');
+                    },
+                    // Parse fetched events and format them for FullCalendar
+                    extraParams: function () {
+                        return {
+                            format: 'json' // Add any extra parameters needed for backend formatting
+                        };
+                    },
+                    eventDataTransform: function(data) {
+                        return {
+                            title: data.title,
+                            start: data.startTime,
+                            end: data.endTime,
+                            // Add any other properties as needed
+                        };
+                    }
+                },
+                
             });
             calendar.render();
+
+            function getEvents() {
+                $.get('/ScheduleMaker/event', function(data) {
+                    var eventContainer = document.getElementById('eventContainer');
+                    eventContainer.innerHTML = ''; // Clear previous events
+
+                    data.forEach(function(event) {
+                        var eventDiv = document.createElement('div');
+                        eventDiv.innerHTML = '<strong>' + event.title + '</strong><br>' + event.description + '</strong><br>' + event.startTime + '</strong><br>' + event.endTime;
+                        eventContainer.appendChild(eventDiv);
+                    });
+                });
+            }
+
+            // Attach event listener to the "Get events" button
+            document.getElementById('getEventsButton').addEventListener('click', getEvents);
         });
-    
     </script>
+
+
 
 </head>
 <body>
@@ -33,6 +70,9 @@
         <div class="row align-items-center justify-content-between">
             <div class="col-auto text-center">
                 <a href="#" class="btn btn-light btn-lg px-4 py-3 fw-bold" data-bs-toggle="modal" data-bs-target="#createEventModal">Add event</a>
+            </div>
+            <div class="col-auto text-center">
+                <a href="#" id ="getEventsButton"class="btn btn-light btn-lg px-4 py-3 fw-bold" data-bs-toggle="modal" data-bs-target="#getEventsModal">Get events</a>
             </div>
             <div class="col-auto text-center">
                 <h1 class="fw-bold">Schedule Maker</h1>
@@ -55,7 +95,7 @@
 
 
 
-
+@Html.Partial("getEventsModal")
 @Html.Partial("registerModal")
 @Html.Partial("loginModal")
 @Html.Partial("createEventModalTest")
