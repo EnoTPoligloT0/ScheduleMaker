@@ -18,8 +18,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/Pages/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3JlYXRlLmNzaHRtbA==
+[/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/Pages/createEventModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvY3JlYXRlRXZlbnRNb2RhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/Pages/createEventModalTest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvY3JlYXRlRXZlbnRNb2RhbFRlc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/Pages/Delete.cshtml]
@@ -42,6 +46,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/Pages/Shared/EventForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL0V2ZW50Rm9ybS5jc2h0bWw=
+[/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/Pages/signinModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvc2lnbmluTW9kYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/Pages/signupModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvc2lnbnVwTW9kYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

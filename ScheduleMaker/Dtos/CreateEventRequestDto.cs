@@ -22,11 +22,4 @@ public class CreateEventRequestDto
     [DataType(DataType.DateTime, ErrorMessage = "Invalid format for EndTime")]
     public DateTime EndTime { get; set; }
     
-    public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-    {
-        if (EndTime <= StartTime)
-        {
-            yield return new ValidationResult("EndTime must be greater than StartTime", new[] { nameof(EndTime) });
-        }
-    }
 }

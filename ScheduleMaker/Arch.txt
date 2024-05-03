@@ -48,3 +48,13 @@ Schedule
     ├── EventRepository.cs
     │
     └── .csproj files, .gitignore, etc.
+    
+     EventDto.StartTime = CombineDateTime(EventDto.StartDate, EventDto.StartTime);
+     EventDto.EndTime = CombineDateTime(EventDto.EndDate, EventDto.EndTime);
+     
+     
+     EventDto.StartTime = CombineDateTime(EventDto.StartTime.Date, EventDto.StartTime.TimeOfDay);
+    EventDto.EndTime = CombineDateTime(EventDto.StartTime.Date, EventDto.EndTime.TimeOfDay);
+
+     
+     nuzno kak to razbit dannie s StartTime i EndTime w 
