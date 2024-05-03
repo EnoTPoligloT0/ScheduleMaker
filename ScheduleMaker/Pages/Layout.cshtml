@@ -28,36 +28,36 @@
 <div class="b-example-divider"></div>
 
 
-@* HEADER *@
-<header class="p-3 text-bg-light">
+<header class="p-3 bg-primary text-white">
     <div class="container-fluid">
-        <div class="d-flex flex-wrap align-items-center justify-content-between text-start w-100">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-            </a>
-
-            <!-- Center the "Add event" button -->
-            <div class="text-center">
-                <a href="#" class="btn btn-primary btn-lg px-4 py-3 me-2 bg-black text-light fw-bold " data-bs-toggle="modal" data-bs-target="#createEventModal">Add event</a>
+        <div class="row align-items-center justify-content-between">
+            <div class="col-auto text-center">
+                <a href="#" class="btn btn-light btn-lg px-4 py-3 fw-bold" data-bs-toggle="modal" data-bs-target="#createEventModal">Add event</a>
             </div>
-
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#" class="nav-link px-4 fs-5 py-3 text-secondary text-black text-bg-light fw-bold">Calendar</a></li>
-                <li><a href="http://localhost:5083/swagger/index.html" class="nav-link px-4 fs-5 py-3 text-bg-light text-black bg-light-subtle fw-bold">Swagger</a></li>
-                <li><a href="#" class="nav-link px-4 fs-5 py-3 text-bg-light text-black text-light fw-bold">About</a></li>
-            </ul>
-
-            <div class="text-end">
-                <button type="button" class="btn btn-outline-light btn-lg px-4 py-3 me-2 bg-black text-light fw-bold" data-bs-toggle="modal" data-bs-target="#signinModal">Login</button>
-                <button type="button" class="btn btn-warning btn-lg bg-black text-light px-4 py-3 fw-bold" data-bs-toggle="modal" data-bs-target="#signupModal">Sign-up</button>
+            <div class="col-auto text-center">
+                <h1 class="fw-bold">Schedule Maker</h1>
+            </div>
+            <div class="col-auto">
+                <ul class="nav">
+                    <li><a href="#" class="nav-link px-4 fs-5 py-3 text-white fw-bold">Calendar</a></li>
+                    <li><a href="http://localhost:5083/swagger/index.html" class="nav-link px-4 fs-5 py-3 text-white fw-bold">Swagger</a></li>
+                    <li><a href="#" class="nav-link px-4 fs-5 py-3 text-white fw-bold">About</a></li>
+                </ul>
+            </div>
+            <div class="col-auto">
+                <button type="button" class="btn btn-light btn-lg px-4 py-3 me-2 fw-bold" data-bs-toggle="modal" data-bs-target="#signinModal">Login</button>
+                <button type="button" class="btn btn-warning btn-lg px-4 py-3 fw-bold" data-bs-toggle="modal" data-bs-target="#signupModal">Sign-up</button>
             </div>
         </div>
     </div>
 </header>
 
 
-@Html.Partial("signupModal")
-@Html.Partial("signinModal")
+
+
+
+@Html.Partial("registerModal")
+@Html.Partial("loginModal")
 @Html.Partial("createEventModalTest")
 
 

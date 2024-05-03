@@ -46,10 +46,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/Pages/signinModal.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvc2lnbmluTW9kYWwuY3NodG1s
+[/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/Pages/loginModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvbG9naW5Nb2RhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/Pages/signupModal.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvc2lnbnVwTW9kYWwuY3NodG1s
+[/home/enotpoliglot/RiderProjects/Schedule/ScheduleMaker/Pages/registerModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvcmVnaXN0ZXJNb2RhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

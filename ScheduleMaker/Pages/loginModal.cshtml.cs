@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ScheduleMaker.Pages;
 
-public class signinModal : PageModel
+public class loginModal : PageModel
 {
     public void OnGet()
     {
