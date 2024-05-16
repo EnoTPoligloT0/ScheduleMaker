@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Artem\RiderProjects\ScheduleMaker\ScheduleMaker
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Artem/RiderProjects/ScheduleMaker/ScheduleMaker/Pages/Calendar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FsZW5kYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Artem/RiderProjects/ScheduleMaker/ScheduleMaker/Pages/createEventModal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY3JlYXRlRXZlbnRNb2RhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

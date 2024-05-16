@@ -58,3 +58,16 @@ Schedule
 
      
      nuzno kak to razbit dannie s StartTime i EndTime w 
+     
+     function getEvents() {
+                     $.get('/ScheduleMaker/event', function(data) {
+                         var eventContainer = document.getElementById('eventContainer');
+                         eventContainer.innerHTML = ''; // Clear previous events
+     
+                         data.forEach(function(event) {
+                             var eventDiv = document.createElement('div');
+                             eventDiv.innerHTML = '<strong>' + event.title + '</strong><br>' + event.description + '</strong><br>' + event.startTime + '</strong><br>' + event.endTime;
+                             eventContainer.appendChild(eventDiv);
+                         });
+                     });
+                 }
