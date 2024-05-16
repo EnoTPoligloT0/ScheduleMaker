@@ -19,6 +19,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddRazorPages();
+
 
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
 {
@@ -77,11 +79,15 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
-app.UseAuthentication();
+app.UseAuthorization();
 
-app.MapControllers();
+
+app.MapControllers();   
+app.MapRazorPages();
 
 app.Run();
+
+
 
 //public TimeSpan Duration => EndTime - StartTime; // Вычисляемое свойство для получения продолжительности события
 

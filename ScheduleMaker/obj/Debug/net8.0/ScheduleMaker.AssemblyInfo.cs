@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ScheduleMaker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0282a149a2aac5771f1c9c9d6f8578d98ef0c955")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f74e9ee0d9031d8de08dea914b53caecbc7a9da")]
 [assembly: System.Reflection.AssemblyProductAttribute("ScheduleMaker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ScheduleMaker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

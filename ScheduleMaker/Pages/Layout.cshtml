@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                themeSystem: 'bootstrap5',
+                initialView: 'timeGridWeek',
+                selectable: true,
+                navLinks: true,
+                timeFormat: 'H(:mm)',
+                navLinkDayClick: function(date, jsEvent) {
+                    console.log('day', date.toISOString());
+                    console.log('coords', jsEvent.pageX, jsEvent.pageY);
+                },
+                dateClick: function(info) {
+                    alert('Clicked on: ' + info.dateStr);
+                    
+                },
+                eventClick: function(info) {
+                    var eventDetails = 
+                        "Title: " + info.event.title + "\n" +
+                        "Start: " + info.event.start.toISOString() + "\n" +
+                        "End: " + (info.event.end ? info.event.end.toISOString() : 'N/A');
+
+                    alert(eventDetails);
+                },
+
+                headerToolbar: {
+                    start: 'today,prev,next',
+                    center: 'title',
+                    end: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+                },
+                events:  {
+                    url: '/ScheduleMaker/event',
+                    extraParams: 
+                    {
+                        format: 'json' 
+                    },
+                    eventDataTransform: function(data) {
+                        return {
+                            title: data.title,
+                            start: data.startTime,
+                            end: data.endTime,
+                        };
+                    }
+                },
+                
+            });
+            calendar.render();
+
+           
+
+            // Attach event listener to the "Get events" button
+        });
+    </script>
+    
+</head>
+<body>
+<div class="b-example-divider"></div>
+
+
+<header class="p-3 bg-primary text-white">
+    <div class="container-fluid">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-auto text-center">
+                <a href="#" class="btn btn-light btn-lg px-4 py-3 fw-bold" data-bs-toggle="modal" data-bs-target="#createEventModal">Add event</a>
+            </div>
+
+            <div class="col-auto text-center">
+                <h1 class="fw-bold">Schedule Maker</h1>
+            </div>
+            <div class="col-auto">
+                <ul class="nav">
+                    <li><a href="#" class="nav-link px-4 fs-5 py-3 text-white fw-bold">Calendar</a></li>
+                    <li><a href="http://localhost:5083/swagger/index.html" class="nav-link px-4 fs-5 py-3 text-white fw-bold">Swagger</a></li>
+                    <li><a href="#" class="nav-link px-4 fs-5 py-3 text-white fw-bold">About</a></li>
+                </ul>
+            </div>
+            <div class="col-auto">
+                <button type="button" class="btn btn-light btn-lg px-4 py-3 me-2 fw-bold" data-bs-toggle="modal" data-bs-target="#signinModal">Login</button>
+                <button type="button" class="btn btn-warning btn-lg px-4 py-3 fw-bold" data-bs-toggle="modal" data-bs-target="#signupModal">Sign-up</button>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+@Html.Partial("getEventsModal")
+@Html.Partial("registerModal")
+@Html.Partial("loginModal")
+@Html.Partial("createEventModalTest")
+
+
+
+
+
+
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+<div id='calendar'></div>
+
+@RenderBody() <!-- Render the content of the view -->
+
+@RenderSection("Scripts", required: false) <!-- Include Scripts section -->
+
+</body>
+</html>
