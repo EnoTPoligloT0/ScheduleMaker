@@ -17,6 +17,12 @@
                 selectable: true,
                 navLinks: true,
                 timeFormat: 'H(:mm)',
+                slotLabelFormat: {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    omitZeroMinute: false,
+                    hour12: false // Set to false for 24-hour format
+                },
                 navLinkDayClick: function(date, jsEvent) {
                     console.log('day', date.toISOString());
                     console.log('coords', jsEvent.pageX, jsEvent.pageY);
@@ -26,12 +32,22 @@
                     
                 },
                 eventClick: function(info) {
-                    var eventDetails = 
-                        "Title: " + info.event.title + "\n" +
-                        "Start: " + info.event.start.toISOString() + "\n" +
-                        "End: " + (info.event.end ? info.event.end.toISOString() : 'N/A');
+                    var eventId = info.event.id;
+                    console.log('Event ID:', eventId);
+                    
+                    document.getElementById('updateEventTitle').value = info.event.title;
+                    document.getElementById('updateEventDescription').value = info.event.extendedProps.description;
+                    document.getElementById('eventStartDay').value = info.event.start.toISOString().slice(0, 16); // Set value for datetime-local
+                    document.getElementById('eventEndDay').value = info.event.end ? info.event.end.toISOString().slice(0, 16) : ''; // Check for null end time
 
-                    alert(eventDetails);
+                    // Save the event ID to the form's dataset for later use in submission
+;
+                    document.getElementById('updateEventForm').setAttribute('data-event-id', eventId);
+
+                    // Show the updateEventModal
+                    $('#updateEventModal').modal('show');
+                    
+                    
                 },
 
                 headerToolbar: {
@@ -47,6 +63,7 @@
                     },
                     eventDataTransform: function(data) {
                         return {
+                            id: data.id,
                             title: data.title,
                             start: data.startTime,
                             end: data.endTime,
@@ -67,16 +84,17 @@
 <body>
 <div class="b-example-divider"></div>
 
-
 <header class="p-3 bg-primary text-white">
     <div class="container-fluid">
         <div class="row align-items-center justify-content-between">
             <div class="col-auto text-center">
-                <a href="#" class="btn btn-light btn-lg px-4 py-3 fw-bold" data-bs-toggle="modal" data-bs-target="#createEventModal">Add event</a>
+                <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+                </a>
             </div>
 
             <div class="col-auto text-center">
                 <h1 class="fw-bold">Schedule Maker</h1>
+                
             </div>
             <div class="col-auto">
                 <ul class="nav">
@@ -86,20 +104,70 @@
                 </ul>
             </div>
             <div class="col-auto">
-                <button type="button" class="btn btn-light btn-lg px-4 py-3 me-2 fw-bold" data-bs-toggle="modal" data-bs-target="#signinModal">Login</button>
-                <button type="button" class="btn btn-warning btn-lg px-4 py-3 fw-bold" data-bs-toggle="modal" data-bs-target="#signupModal">Sign-up</button>
+                <i class="bi-person-circle h2"></i>
             </div>
         </div>
     </div>
 </header>
 
-
-
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-auto bg-light sticky-top">
+            <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
+                <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+                    <i class="bi-bootstrap fs-1"></i>
+                </a>
+                <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+                            <i class="bi-house fs-1"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                            <i class="bi-speedometer2 fs-1"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Calendar">
+                            <i class="bi-table fs-1"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products">
+                            <i class="bi bi-calendar-plus fs-1" data-bs-toggle="modal" data-bs-target="#createEventModal"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
+                            <i class="bi-people fs-1"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi-person-circle h2" data-bs-toggle="modal" data-bs-target="#signinModal"></i>
+                    </a>
+                    <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
+                        <li><a class="dropdown-item" href="#">New project...</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm p-3 min-vh-100">
+            <!-- content -->
+            <div id='calendar'></div>
+        </div>
+    </div>
+</div>
 
 @Html.Partial("getEventsModal")
 @Html.Partial("registerModal")
 @Html.Partial("loginModal")
 @Html.Partial("createEventModalTest")
+@Html.Partial("editEventModal")
 
 
 
@@ -108,7 +176,7 @@
 
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
-<div id='calendar'></div>
+
 
 @RenderBody() <!-- Render the content of the view -->
 
